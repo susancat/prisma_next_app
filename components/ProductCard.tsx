@@ -13,7 +13,7 @@ const ProductCard = (props: ProductCardProps) => {
   return (
     <div className="border-gray-300 border rounded-lg py-8 px-6">
       <div className="text-center">
-        <Image src={product.image} width={200} height={200} />
+        <Image src={product.image} width={200} height={200} alt="" />
       </div>
       <p className="font-bold text-2xl text-gray-700 mt-4">{product.name}</p>
       <p className="text-gray-500 my-4">{product.description}</p>

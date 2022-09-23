@@ -11,10 +11,10 @@ yarn dev
 ```
 
 ## prisma
-yarn global add prisma
-yarn prisma generate
-yarn prisma
-yarn prisma init 
-so a /prisma folder was generated with a /schema.prisma file
+- yarn global add prisma
+- yarn prisma generate
+- yarn prisma
+- yarn prisma init 
+- so a /prisma folder was generated with a /schema.prisma file
 
-local mySQL database
+- connect to local mySQL database, use yarn/npm prisma studio to add records or check

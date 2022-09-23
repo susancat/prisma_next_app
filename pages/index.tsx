@@ -22,12 +22,13 @@ export default function Home(props: HomeProps) {
 //import type Product from node_module which created with models, and create a new type which represent a 1:M relation between product and reviews
 export type ProductWithReviewCount = Product & { _count: { reviews: number } };
 
+//if you don't include relation between product and review, you can just use products:product[] below; and in the getSSP,product = await prisma.products.findMany()
 interface HomeProps {
   products: ProductWithReviewCount[];
 }
 //here you can choose to use Apllo or graghQL but it's tricky to understand which is best to use
 //here it skip to use an endpoint from /api, it interact with DB directly, that's an Next magic
-export async function getServerSideProps() {
+export async function getServerSideProps() { 
   try {
     const products = await prisma.product.findMany({
       include: {
